@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200211034530) do
+ActiveRecord::Schema.define(version: 20200211033333) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "appointment_datetime"
-    t.integer  "doctors_id"
-    t.integer  "patients_id"
+    t.integer  "doctor_id"
+    t.integer  "patient_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-    t.index ["doctors_id"], name: "index_appointments_on_doctors_id"
-    t.index ["patients_id"], name: "index_appointments_on_patients_id"
+    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
 
   create_table "doctors", force: :cascade do |t|
